@@ -7,10 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "https://helpdesk-frontend-sooty.vercel.app")
 @RestController
 @RequestMapping("/api/tickets")
-// Un pro restreint l'accès à son domaine de confiance uniquement
-@CrossOrigin(origins = "http://localhost:5173")
 public class TicketController {
 
     private final TicketService ticketService;
