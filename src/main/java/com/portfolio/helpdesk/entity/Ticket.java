@@ -2,24 +2,22 @@ package com.portfolio.helpdesk.entity;
 
 import jakarta.persistence.*;
 
-@Entity // Dit à Spring : "Ceci est une table de base de données"
+@Entity
 public class Ticket {
 
-    @Id // Dit à Spring : "Ceci est la Clé Primaire (Primary Key)"
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Equivalent de l'AUTO_INCREMENT en SQL
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
     private String description;
-    private String status; // Par exemple : "OUVERT", "EN_COURS", "FERMÉ"
+    private String status;
 
-    // Constructeur vide obligatoire pour que Spring Boot fonctionne
+
     public Ticket() {
     }
 
-    // --- GETTERS ET SETTERS ---
-    // En Java, les attributs sont "private". Pour les lire ou les modifier,
-    // on doit créer des méthodes publiques (Getters et Setters).
+
 
     public Long getId() {
         return id;
